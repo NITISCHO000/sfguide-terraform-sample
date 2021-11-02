@@ -11,7 +11,7 @@ provider "snowflake" {
   alias = "sys_admin"
   role  = "SYSADMIN"
   region = "US-WEST-2"
-  account = "kka94144"
+  account = "kka94144.us-west-2"
   username = "tf-snow"
   private_key_path = "C:\\Users\\NitinC\\.ssh\\snowflake_tf_snow_key"
 }
