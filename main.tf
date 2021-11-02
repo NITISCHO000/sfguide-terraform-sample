@@ -12,7 +12,7 @@ provider "snowflake" {
   role  = "SYSADMIN"
   region = "US_EAST_1"
   account = "wza20831"
-  private_key_path =  "<path to the key>"
+  private_key_path = {C:\\Users\NitinC\\..ssh"}
   username = "tf-snow"
 }
 
