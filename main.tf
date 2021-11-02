@@ -30,6 +30,10 @@ resource "snowflake_warehouse" "warehouse" {
   provider "snowflake" {
         alias = "security_admin"
         role  = "SECURITYADMIN"
+        region = "us-west-2"
+        account = "kka94144"
+        username = "tf-snow"
+     private_key_path = "C:\\Users\\NitinC\\.ssh\\snowflake_tf_snow_key"
     }
 
 
