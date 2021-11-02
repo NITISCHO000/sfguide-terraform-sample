@@ -13,7 +13,7 @@ provider "snowflake" {
   region = "US_EAST_1"
   account = "wza20831"
   username = "tf-snow"
-  private_key_path = "${path.module}/C:\\Users\\NitinC\\.ssh"
+  private_key_path = "${path.module}/C:\\Users\\NitinC\\.ssh\\snowflake_tf_snow_key"
 }
 
 resource "snowflake_database" "db" {
