@@ -27,4 +27,13 @@ resource "snowflake_warehouse" "warehouse" {
   warehouse_size = "large"
   auto_suspend = 60
 }
+  provider "snowflake" {
+        alias = "security_admin"
+        role  = "SECURITYADMIN"
+    }
 
+
+    resource "snowflake_role" "role" {
+        provider = snowflake.security_admin
+        name     = "TF_DEMO_SVC_ROLE"
+    }
