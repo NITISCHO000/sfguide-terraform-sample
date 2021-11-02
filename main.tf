@@ -10,8 +10,8 @@ terraform {
 provider "snowflake" {
   alias = "sys_admin"
   role  = "SYSADMIN"
-  region = "US_EAST_1"
-  account = "wza20831"
+  region = "US_WEST_2"
+  account = "kka94144"
   username = "tf-snow"
   private_key_path = "C:\\Users\\NitinC\\.ssh\\snowflake_tf_snow_key"
 }
