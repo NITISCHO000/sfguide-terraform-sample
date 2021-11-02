@@ -7,8 +7,7 @@ terraform {
   }
 }
 
-variable "test" 
-{
+variable "test" {
   type = string
   default = "C:\Users\NitinC\.ssh"
 }
