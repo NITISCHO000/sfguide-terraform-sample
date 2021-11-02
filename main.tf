@@ -10,7 +10,7 @@ terraform {
 provider "snowflake" {
   alias = "sys_admin"
   role  = "SYSADMIN"
-  region = "US_WEST_2"
+  region = "AWS_US_WEST_2"
   account = "kka94144"
   username = "tf-snow"
   private_key_path = "C:\\Users\\NitinC\\.ssh\\snowflake_tf_snow_key"
@@ -25,7 +25,6 @@ resource "snowflake_warehouse" "warehouse" {
   provider       = snowflake.sys_admin
   name           = "TF_DEMO"
   warehouse_size = "large"
-
   auto_suspend = 60
 }
 
