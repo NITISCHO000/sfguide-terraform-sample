@@ -37,3 +37,12 @@ resource "snowflake_warehouse" "warehouse" {
         provider = snowflake.security_admin
         name     = "TF_DEMO_SVC_ROLE"
     }
+
+
+    resource "snowflake_database_grant" "grant" {
+        provider          = snowflake.security_admin
+        database_name     = snowflake_database.db.name
+        privilege         = "USAGE"
+        roles             = [snowflake_role.role.name]
+        with_grant_option = false
+    }
