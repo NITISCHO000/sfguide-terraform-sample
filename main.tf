@@ -7,18 +7,13 @@ terraform {
   }
 }
 
-variable "test" {
-  type = string
-  default = "C:\Users\NitinC\.ssh"
-}
-
 provider "snowflake" {
   alias = "sys_admin"
   role  = "SYSADMIN"
   region = "US_EAST_1"
   account = "wza20831"
   username = "tf-snow"
-  private_key_path = var.test
+  private_key_path =  file("${path.module}/C:\Users\NitinC\.ssh\snowflake_tf_snow_key")
 }
 
 resource "snowflake_database" "db" {
